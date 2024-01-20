@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebDev2.Models.Users>
+@{
+    ViewData["Title"] = "Users";
+}
+<h2>Users</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.UserID)</th>
+            <th>@Html.DisplayNameFor(model=>model.Email)</th>
+            <th>@Html.DisplayNameFor(model=>model.Name)</th>
+            <th>@Html.DisplayNameFor(model=>model.Password)</th>
+            <th>@Html.DisplayNameFor(model=>model.datetimeadded)</th>
+        </tr>
+    </thead>
+    <tboday>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>item.UserID)</td>
+                <td>@Html.DisplayFor(modelItem=>item.Email)</td>
+                <td>@Html.DisplayFor(modelItem=>item.Name)</td>
+                <td>@Html.DisplayFor(modelItem=>item.Password)</td>
+                <td>@Html.DisplayFor(modelItem=>item.datetimeadded)</td>
+            </tr>
+        }
+    </tboday>
+</table>

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebDev2.Models.Product>
+@{
+    ViewData["Title"] = "Product";
+}
+<h2>Product</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model=>model.idproducts)</th>
+            <th>@Html.DisplayNameFor(model=>model.productname)</th>
+            <th>@Html.DisplayNameFor(model=>model.category)</th>
+            <th>@Html.DisplayNameFor(model=>model.price)</th>
+            <th>@Html.DisplayNameFor(model=>model.datetimeadded)</th>
+            <th>@Html.DisplayNameFor(model=>model.description)</th>
+        </tr>
+    </thead>
+    <tboday>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem=>item.idproducts)</td>
+                <td>@Html.DisplayFor(modelItem=>item.productname)</td>
+                <td>@Html.DisplayFor(modelItem=>item.category)</td>
+                <td>@Html.DisplayFor(modelItem=>item.price)</td>
+                <td>@Html.DisplayFor(modelItem=>item.datetimeadded)</td>
+                <td>@Html.DisplayFor(modelItem=>item.description)</td>
+            </tr>
+        }
+    </tboday>
+</table>
